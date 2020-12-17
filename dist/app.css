@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Andika New Basic", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+header {
+  height: 100px;
+  background-color: black;
+  color: white;
+}
+
+header h1 {
+  line-height: 100px;
+  margin-left: 20px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+main {
+  height: calc(100vh - 100px);
+  background-color: #555;
+}
+
+.card {
+  max-width: 250px;
+}
+
