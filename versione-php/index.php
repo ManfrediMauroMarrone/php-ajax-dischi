@@ -7,7 +7,7 @@ include 'dischi.php';
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="dist/app.css">
+    <link rel="stylesheet" href="../dist/app.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Andika+New+Basic:ital@1&display=swap" rel="stylesheet">
   </head>
@@ -29,7 +29,7 @@ include 'dischi.php';
         <div class="card-container">
           <?php foreach ($dischi as $disco) { ?>
             <div class="card">
-              <div class="php">
+              <div class="image">
                 <img src="<?php echo $disco['poster']; ?>" alt="">
 
               </div>
