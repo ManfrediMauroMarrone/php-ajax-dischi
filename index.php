@@ -26,16 +26,20 @@ include 'dischi.php';
     </header>
     <main>
       <div class="container">
-        <div class="card">
-          <div class="image">
-            <img src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
+        <div class="card-container">
+          <?php foreach ($dischi as $disco) { ?>
+            <div class="card">
+              <div class="php">
+                <img src="<?php echo $disco['poster']; ?>" alt="">
 
-          </div>
-          <em>title</em>
-          <h5>title</h5>
-          <h5>title</h5>
-          <h5>title</h5>
+              </div>
+              <h2><?php  echo $disco['title'] ?></h2>
+              <em><?php  echo $disco['author'] ?></em>
+              <small><?php  echo $disco['year'] ?></small>
 
+            </div>
+            <?php
+          } ?>
         </div>
       </div>
     </main>
