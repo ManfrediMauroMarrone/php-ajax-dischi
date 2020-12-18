@@ -73,11 +73,32 @@ $dischi = [
     ]
 ];
 
+// verifico se esiste un parametro get
+if (!empty($_GET) && !empty($_GET['genre'])) {
+  // recupero il genere selezionato dalla query string
+  $genre = $_GET['genre'];
+
+  // creo un array che contiene i dischi filtrati
+  $selected_album = [];
+  // filtro i dischi in base al genere
+  // ciclo tutti i dischi
+  foreach ($dischi as $disco) {
+    // per ogni disco verifico se il genere corrisponde al genere selezionato
+    if ($disco['genre'] == $genre) {
+      // se sì lo salvo in un array
+      $selected_album[] = $disco;
+    }
+  }
+} else {
+  // la query string è vuota oppure il genere è svuoto
+  $selected_album = $dischi;
+}
+
 if ( !empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest' )
 {
   header('Content-Type: application/json');
 
-  echo json_encode($dischi);
+  echo json_encode($selected_album);
 
 }
 
