@@ -27,4 +27,9 @@ $(document).ready(function(){
       console.log('errore');
     }
   });
+
+  // intercetto il cambio della select
+  $('#filter').change(function(){
+    alert('selezionato');
+  });
 });
