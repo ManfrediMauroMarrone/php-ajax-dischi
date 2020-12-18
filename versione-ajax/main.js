@@ -4,7 +4,7 @@ $(document).ready(function(){
   var template = Handlebars.compile(source);
 
   $.ajax({
-    url: 'dischi.php',
+    url: '../dischi.php',
     methods: 'GET',
     success: function(data){
       for (var i = 0; i < data.length; i++) {

@@ -1,5 +1,5 @@
 <?php
-include 'dischi.php';
+include '../dischi.php';
  ?>
 
 <!DOCTYPE html>
