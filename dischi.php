@@ -73,6 +73,16 @@ $dischi = [
     ]
 ];
 
+// preparo un array contenente tutti i generi
+$genres = [];
+foreach ($dischi as $disco) {
+    // recupero il genere del disco corrente
+    $genre = $disco['genre'];
+    if(!in_array($genre, $genres)){
+        $genres[] = $genre;
+    }
+}
+
 // verifico se esiste un parametro get
 if (!empty($_GET) && !empty($_GET['genre'])) {
   // recupero il genere selezionato dalla query string
